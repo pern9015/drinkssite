@@ -95,13 +95,13 @@
                     klon.querySelector(".udgift").textContent += menu.udgift;
                     klon.querySelector(".fremgangsmåde").textContent = menu.Fremgangsmåde;
                     klon.querySelector(".billede").src = medieurl + menu.Billede;
-                    klon.querySelector("#menu").addEventListener("click", () => visDetaljer(menu));
+                    klon.querySelector("#menu").addEventListener("click", () => visDrink(menu));
                     dest.appendChild(klon);
                 }
             })
         }
 
-        function visDetaljer(hvad) {
+        function visDrink(hvad) {
             location.href = `singleview.html?id=${hvad._id}`;
         }
     </script>

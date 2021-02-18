@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <main>
+        <article id="menu">
+            <img src="" alt="" class="billede">
+            <h3 class="navn">
+            </h3>
+            <h3 class="alkoholtype">
+            </h3>
+            <p class="fremgangsmåde"></p>
+            <p class="opskrift"></p>
+            <p class="udgift"></p>
+            <img src="" alt="" class="fuldhedsskala">
+        </article>
+    </main>
+
+    <script>
+        //new URLSearchParams fisker vores url-parametre ud af vores location string (window.location.search)
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get("id");
+
+        const medieurl = "https://drinks-bd08.restdb.io/media/";
+        let menu;
+        const myHeaders = {
+            "x-apikey": "602e3d105ad3610fb5bb62cf"
+        };
+
+        console.log("ID", id);
+        document.addEventListener("DOMContentLoaded", loadJSON);
+
+        async function loadJSON() {
+            const JSONData = await fetch(`https://drinks-bd08.restdb.io/rest/drinks/${id}`, {
+                headers: myHeaders
+            });
+            menu = await JSONData.json();
+            visDrink();
+        }
+
+        function visDrink() {
+            document.querySelector(".billede").src = medieurl + menu.Billede;
+            document.querySelector(".navn").textContent = menu.Navn;
+            document.querySelector(".alkoholtype").textContent += " " + menu.Alkoholtype;
+            document.querySelector(".fremgangsmåde").innerHTML = menu.Fremgangsmåde;
+            document.querySelector(".opskrift").innerHTML = menu.opskrift;
+            document.querySelector(".udgift").textContent = menu.udgift;
+            document.querySelector(".fuldhedsskala").src = medieurl + menu.fuldhedsskala;
+            //eventlistener på tilbageknappen
+            //            document.querySelector("button").addEventListener("click", tilbageTilDrinksGalleri);
+        }
+        //eventhandler på knappen
+        function tilbageTilDrinksGalleri() {
+            //history = webapi for at komme baglængs, hvis vi kalder back kommer vi et hak tilbage i browserhistorien (dermed tilbage til 01-kald.html)
+            history.back();
+        }
+
+    </script>
+</body>
+
+</html>
