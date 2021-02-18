@@ -9,11 +9,101 @@
     </style>
 </head>
 
+<style>
+    img {
+        width: 50%;
+</style>
+
 <body>
+    <main>
+        <nav class="filter">
+            <button data-alkoholtype="alle" class="valgt">Alle</button>
+            <button data-alkoholtype="Gin">Gin</button>
+            <button data-alkoholtype="Rom">Rom</button>
+            <button data-alkoholtype="Vodka">Vodka</button>
+            <button data-alkoholtype="Virgin">Virgin</button>
+        </nav>
+
+        <header>
+            <h2>Alle</h2>
+        </header>
 
 
+        <section id="liste"></section>
 
-    <script></script>
-</body>
+        <template>
+            <article id="menu">
+                <img src="" alt="" class="billede">
+                <h3 class="navn">
+                </h3>
+                <p class="fremgangsmåde"></p>
+                <p class="udgift">Pris: </p>
+            </article>
+        </template>
 
-</html>
+    </main>
+
+    <script>
+        const header = document.querySelector("header h2");
+        const medieurl = "https://drinks-bd08.restdb.io/media/";
+        const myHeaders = {
+            "x-apikey": "602e3d105ad3610fb5bb62cf"
+        }
+        document.addEventListener("DOMContentLoaded", start)
+        let menu;
+        let filter = "alle";
+
+        function start() {
+            const filterKnapper = document.querySelectorAll(".filter button");
+            filterKnapper.forEach(knap => knap.addEventListener("click", filtrerMenu));
+            loadJSON();
+        }
+
+        function filtrerMenu() {
+            filter = this.dataset.alkoholtype; //sæt variabel "filter" til værdien af data-troende på den knap der er klikket på
+            console.log("filter", filter);
+            document.querySelector(".valgt").classList.remove("valgt");
+            this.classList.add("valgt");
+            visMenu(); //kald funktionen visPersoner efter det nye filter er sat
+            header.textContent = this.textContent;
+        }
+
+        async function loadJSON() {
+            const JSONData = await fetch("https://drinks-bd08.restdb.io/rest/drinks", {
+                headers: myHeaders
+            });
+            menu = await JSONData.json();
+            console.log("Menu", menu);
+            visMenu();
+        }
+
+
+        function visMenu() {
+
+            const dest = document.querySelector("#liste"); // container til articles med en person
+            const skabelon = document.querySelector("template").content; // select indhold af html skabelon (article)
+
+            dest.textContent = ""; //ryd container inden nyt loop
+
+            menu.forEach(menu => {
+                console.log("Alkoholtype", menu.Alkoholtype);
+
+                // loop igennem json (menu)
+                if (filter == menu.Alkoholtype || filter == "alle") {
+                    const klon = skabelon.cloneNode(true);
+                    klon.querySelector(".navn").textContent = menu.Navn;
+                    klon.querySelector(".udgift").textContent += menu.udgift;
+                    klon.querySelector(".fremgangsmåde").textContent = menu.Fremgangsmåde;
+                    klon.querySelector(".billede").src = medieurl + menu.Billede;
+                    klon.querySelector("#menu").addEventListener("click", () => visDetaljer(menu));
+                    dest.appendChild(klon);
+                }
+            })
+        }
+
+        function visDetaljer(hvad) {
+            location.href = `singleview.html?id=${hvad._id}`;
+        }
+    </script>
+
+</body></html>
