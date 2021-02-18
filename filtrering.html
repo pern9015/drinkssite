@@ -5,16 +5,106 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drinks - listeview</title>
-    <style>
-    </style>
 </head>
 
 <style>
+    body {
+        background-color: #141400;
+    }
+
+
+    .logo {
+        width: 20%;
+
+    }
+
+    nav.top a {
+        color: white;
+        text-decoration: none;
+        margin: 8px;
+    }
+
+    nav.top {
+        text-align: right;
+        margin-top: -80px;
+        margin-bottom: 90px;
+    }
+
+
+    .filter {
+        text-align: center;
+    }
+
+    button {
+        cursor: pointer;
+        border: 1px solid white;
+        background-color: #141400;
+        color: white;
+        padding: 10px 20px;
+        width: 85px;
+        margin: 2px;
+
+    }
+
+    h2,
+    h3 {
+        color: white;
+    }
+
     img {
-        width: 50%;
+        width: 100%;
+    }
+
+    #liste {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 10px;
+    }
+
+    @media (min-width: 800px) {
+        .filter {
+            text-align: center;
+        }
+
+        button {
+            cursor: pointer;
+            border: 1px solid white;
+            background-color: #141400;
+            color: white;
+            padding: 10px 20px;
+            width: 200px;
+            margin: 5px;
+            font-size: 20px;
+        }
+
+        nav.top {
+            text-align: right;
+            margin-top: -250px;
+            margin-bottom: 260px;
+        }
+
+        nav.top a {
+            font-size: 20px;
+        }
 </style>
 
 <body>
+    <header>
+        <a href=""><img src="logo1.png" alt="logo" class="logo"></a>
+        <nav class="top">
+            <a href="#data">Drinks</a>
+            <a href="#liste">Inspiration</a>
+            <a href="#nyheder2">Nyheder</a>
+            <!--
+            <div id="menuknap">☰</div>
+            <ul id="menu" class="hidden">
+                <li> <a href="#data">Drinks</a></li>
+                <li><a href="#liste">Inspiration</a></li>
+                <li><a href="#nyheder2">Nyheder</a></li>
+            </ul>
+-->
+        </nav>
+    </header>
     <main>
         <nav class="filter">
             <button data-alkoholtype="alle" class="valgt">Alle</button>
@@ -37,7 +127,7 @@
                 <h3 class="navn">
                 </h3>
                 <p class="fremgangsmåde"></p>
-                <p class="udgift">Pris: </p>
+                <p class="udgift"></p>
             </article>
         </template>
 
@@ -92,8 +182,6 @@
                 if (filter == menu.Alkoholtype || filter == "alle") {
                     const klon = skabelon.cloneNode(true);
                     klon.querySelector(".navn").textContent = menu.Navn;
-                    klon.querySelector(".udgift").textContent += menu.udgift;
-                    klon.querySelector(".fremgangsmåde").textContent = menu.Fremgangsmåde;
                     klon.querySelector(".billede").src = medieurl + menu.Billede;
                     klon.querySelector("#menu").addEventListener("click", () => visDrink(menu));
                     dest.appendChild(klon);

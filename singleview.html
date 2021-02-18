@@ -4,24 +4,66 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="">
+    <title>Singleview</title>
 </head>
+<style>
+    body {
+        margin: 10px;
+        background-color: #141400;
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    h2,
+    h3,
+    p {
+        color: white;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .opskrift {
+        background-color: rgba(255, 165, 0, 0.53);
+        margin: 0px 290px 0px 0;
+        padding: 10px 0;
+    }
+
+    @media (min-width: 800px) {
+        #menu {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 50px;
+        }
+    }
+
+</style>
 
 <body>
+
     <main>
         <article id="menu">
-            <img src="" alt="" class="billede">
-            <h3 class="navn">
-            </h3>
-            <h3 class="alkoholtype">
-            </h3>
-            <p class="fremgangsmåde"></p>
-            <p class="opskrift"></p>
-            <p class="udgift"></p>
-            <img src="" alt="" class="fuldhedsskala">
+            <div class="img">
+                <img src="" alt="" class="billede">
+            </div>
+            <div class="tekst">
+                <h3 class="navn">
+                </h3>
+                <h3 class="alkoholtype">
+                </h3>
+                <p class="fremgangsmåde"></p>
+                <p class="opskrift"></p>
+                <p class="udgift"></p>
+                <img src="" alt="" class="fuldhedsskala">
+            </div>
         </article>
+
+        <button>Tilbage til menu</button>
     </main>
+
 
     <script>
         //new URLSearchParams fisker vores url-parametre ud af vores location string (window.location.search)
@@ -54,7 +96,7 @@
             document.querySelector(".udgift").textContent = menu.udgift;
             document.querySelector(".fuldhedsskala").src = medieurl + menu.fuldhedsskala;
             //eventlistener på tilbageknappen
-            //            document.querySelector("button").addEventListener("click", tilbageTilDrinksGalleri);
+            document.querySelector("button").addEventListener("click", tilbageTilDrinksGalleri);
         }
         //eventhandler på knappen
         function tilbageTilDrinksGalleri() {
