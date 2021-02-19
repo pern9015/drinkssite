@@ -9,6 +9,7 @@
     <style>
         Body {
             background-color: #141400;
+            margin: 0px;
         }
 
         #video_intro {
@@ -17,6 +18,54 @@
             object-fit: cover;
         }
 
+        #second_section h1,
+        p {
+            color: white;
+            text-align: center;
+            margin: 20px 28px;
+        }
+
+        button {
+            text-align: center;
+            color: white;
+            background-color: #141400;
+            border: 1px solid white;
+            padding: 10px;
+            margin: 20px 0 50px 170px;
+            font-size: 16px;
+        }
+
+        img {
+            width: 100%
+        }
+
+        @media (min-width: 800px) {
+            video {
+                margin-bottom: 50px;
+            }
+
+            #second_section h1 {
+                font-size: 50px;
+            }
+
+            #second_section p {
+                font-size: 20px;
+            }
+
+            button {
+                margin: 20px 0 50px 31.5em;
+                font-size: 20px;
+
+            }
+
+
+            #third_section {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 50px;
+                margin: 0 50px 50px 50px;
+            }
+        }
     </style>
 </head>
 
@@ -26,6 +75,21 @@
         <div class="video"> <video id="video_intro" autoplay loop muted src="http://pernillestrate.dk/kea/07_dynamisk_web/07.04.01/Splashvideo1.mp4"></video></div>
     </section>
 
-</body>
+    <section id="second_section">
+        <h1>Great drinks bring us together</h1>
+        <p>Hos Drink Up tror vi på at kvaliteten af drinksene, er med til at skabe
+            den helt unikke drink til lige præcis den stemning du ønsker.</p>
+        <button>Vælg din drink her</button>
+    </section>
 
-</html>
+    <section id="third_section">
+        <img src="kevin-kelly-PPneSBqfCCU-unsplash.jpg" alt="rose">
+        <img src="MARGARITA.jpg" alt="magaritta">
+    </section>
+
+    <section id="fourth_section">
+        <img src="drinks_nyheder.jpg" alt="nyheder">
+
+    </section>
+
+</body></html>
