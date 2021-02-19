@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drinks site</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&family=Open+Sans:wght@300;400;600&family=Titillium+Web:wght@200;300;400;600&display=swap" rel="stylesheet">
 
     <style>
         Body {
@@ -12,10 +14,61 @@
             margin: 0px;
         }
 
+        .logo {
+            width: 50%;
+            z-index: 2;
+            position: relative;
+            top: 35px;
+            left: 25%;
+
+        }
+
+        nav.top a {
+            color: white;
+            text-decoration: none;
+            margin: 8px;
+            position: relative;
+            z-index: 2;
+            font-family: 'Titillium', sans-serif;
+        }
+
+        nav.top {
+            text-align: right;
+            margin-top: -230px;
+            margin-bottom: 00px;
+        }
+
+
+
+        h1 {
+            font-family: 'Inter', sans-serif;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+        }
+
+        p {
+            font-family: 'Open Sans',
+                sans-serif;
+            font-weight: 300;
+        }
+
+        button {
+            font-family: 'Titillium', sans-serif;
+            font-weight: bold;
+        }
+
+
         #video_intro {
             height: 100%;
             width: 100%;
             object-fit: cover;
+            z-index: -1;
+            margin-top: -25px;
         }
 
         #second_section h1,
@@ -24,6 +77,13 @@
             text-align: center;
             margin: 20px 28px;
         }
+
+        #second_section p {
+            color: white;
+            text-align: center;
+            margin: 25px 40px;
+        }
+
 
         #second_section h1 {
             margin-top: 50px;
@@ -92,6 +152,41 @@
 
 
         @media (min-width: 800px) {
+
+            nav.top {
+                text-align: right;
+                margin-top: -650px;
+                margin-bottom: 0px;
+            }
+
+            nav.top a {
+                color: white;
+                text-decoration: none;
+                margin: 28px;
+                position: relative;
+                z-index: 2;
+                font-family: 'Titillium', sans-serif;
+                font-size: 27px;
+            }
+
+
+
+            .logo {
+                width: 50%;
+                z-index: 2;
+                position: relative;
+                top: 95px;
+                left: 25%;
+            }
+
+            #video_intro {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                z-index: -1;
+                margin-top: -55px;
+            }
+
             video {
                 margin-bottom: 50px;
             }
@@ -163,10 +258,19 @@
                 padding: 5px 110px 5px 1px;
             }
         }
+
     </style>
 </head>
 
 <body>
+    <header>
+        <a href=""><img src="logo1.png" alt="logo" class="logo"></a>
+        <nav class="top">
+            <a href="#data">Drinks</a>
+            <a href="#liste">Inspiration</a>
+            <a href="#nyheder2">Nyheder</a>
+        </nav>
+    </header>
 
     <section id="first_section">
         <div class="video"> <video id="video_intro" autoplay loop muted src="http://pernillestrate.dk/kea/07_dynamisk_web/07.04.01/Splashvideo1.mp4"></video></div>
@@ -176,7 +280,7 @@
         <h1>Great drinks bring us together</h1>
         <p>Hos Drink Up tror vi på at kvaliteten af drinksene, er med til at skabe
             den helt unikke drink til lige præcis den stemning du ønsker.</p>
-        <button>Vælg din drink her</button>
+        <button>Vælg din drink her!</button>
     </section>
 
     <section id="third_section">
@@ -192,8 +296,10 @@
                 tilbud på diverse drinksopskrifter, samt en masse
                 andre udsøgte VIP-fornøjelser </p>
             <input name="email" type="text" id="email" placeholder="Email">
-            <button id="submit">Skriv dig op her</button>
+            <button id="submit">Skriv dig op her!</button>
         </div>
     </section>
 
-</body></html>
+</body>
+
+</html>
