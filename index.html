@@ -9,14 +9,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&family=Open+Sans:wght@300;400;600&family=Titillium+Web:wght@200;300;400;600&display=swap" rel="stylesheet">
 
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         Body {
             background-color: #131314;
             margin: 0px;
         }
 
+        .nav_logo {
+            width: 20%;
+            float: left;
+            margin-top: 12px;
+            margin-left: -15em;
+            position: fixed;
+            z-index: 1;
+        }
+
+        .menu {
+            position: relative;
+            z-index: 5;
+        }
+
         .logo {
             width: 50%;
-            z-index: 2;
+            z-index: 3;
             position: relative;
             top: 35px;
             left: 25%;
@@ -28,14 +46,17 @@
             text-decoration: none;
             margin: 8px;
             position: relative;
-            z-index: 2;
+            z-index: 3;
             font-family: 'Titillium', sans-serif;
         }
 
         nav.top {
             text-align: right;
-            margin-top: -230px;
-            margin-bottom: 00px;
+            margin-top: -226px;
+            margin-left: 247px;
+            margin-bottom: 0px;
+            position: fixed;
+            z-index: 4;
         }
 
 
@@ -67,8 +88,9 @@
             height: 100%;
             width: 100%;
             object-fit: cover;
-            z-index: -1;
-            margin-top: -25px;
+            position: relative;
+            z-index: 2;
+            margin-top: -14.8em;
         }
 
         #second_section h1,
@@ -135,14 +157,13 @@
         }
 
         #nyheder2 {
-
             background-image: url(drinks_nyheder.jpg);
             background-attachment: fixed;
-            background-position: 0 150px;
+            background-position: 0px 240px;
             background-repeat: no-repeat;
             background-size: cover;
             margin-top: 20px;
-            padding: 120px 0px 480px 0px;
+            padding: 70px 0px 350px 0px;
         }
 
         #nyheder2 h2 {
@@ -155,8 +176,11 @@
 
             nav.top {
                 text-align: right;
-                margin-top: -650px;
+                margin-top: -40em;
+                margin-left: 60em;
                 margin-bottom: 0px;
+                position: fixed;
+                z-index: 4;
             }
 
             nav.top a {
@@ -164,27 +188,36 @@
                 text-decoration: none;
                 margin: 28px;
                 position: relative;
-                z-index: 2;
+                z-index: 3;
                 font-family: 'Titillium', sans-serif;
                 font-size: 27px;
             }
 
 
-
             .logo {
                 width: 50%;
-                z-index: 2;
+                z-index: 3;
                 position: relative;
                 top: 95px;
                 left: 25%;
+            }
+
+            .nav_logo {
+                width: 11%;
+                float: left;
+                margin-top: 18px;
+                margin-left: -44em;
+                position: fixed;
+                z-index: 1;
             }
 
             #video_intro {
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
-                z-index: -1;
-                margin-top: -55px;
+                position: relative;
+                z-index: 2;
+                margin-top: -42em;
             }
 
             video {
@@ -258,17 +291,20 @@
                 padding: 5px 110px 5px 1px;
             }
         }
-
     </style>
 </head>
 
 <body>
     <header>
         <a href=""><img src="logo1.png" alt="logo" class="logo"></a>
+
+        <a href="index.html"><img src="logo1.png" alt="logo" class="nav_logo"></a>
+
         <nav class="top">
-            <a href="#data">Drinks</a>
-            <a href="#liste">Inspiration</a>
+            <a href="filtrering.html">Drinks</a>
+            <a href="filtrering.html">Inspiration</a>
             <a href="#nyheder2">Nyheder</a>
+
         </nav>
     </header>
 
@@ -300,6 +336,4 @@
         </div>
     </section>
 
-</body>
-
-</html>
+</body></html>
