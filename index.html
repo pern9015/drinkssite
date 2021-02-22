@@ -84,6 +84,12 @@
             font-family: 'Titillium', sans-serif;
         }
 
+        /*
+        .top a:hover {
+            color: red;
+        }
+*/
+
         nav.top {
             text-align: right;
             margin-top: -226px;
@@ -250,13 +256,18 @@
                 font-size: 30px;
             }
 
+            li {
+                padding-bottom: 0vw;
+                font-family: 'Montserrat', sans-serif;
+            }
+
             #video_intro {
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
                 position: relative;
                 z-index: 2;
-                margin-top: -23em;
+                margin-top: -25em;
             }
 
             .nav_logo {
@@ -269,15 +280,16 @@
             }
 
             #menu {
+                position: absolute;
+                transform-origin: top right;
+                z-index: 2;
+                text-align: right;
+                transition: transform 0.3s;
                 list-style: none;
-                flex-direction: row;
-                display: flex;
-                float: right;
-                margin-top: -48px;
+                top: -13vw;
+                left: 46vw;
+                cursor: pointer;
                 font-family: 'Montserrat', sans-serif;
-                left: 0;
-                top: 4vw;
-                padding: 9px;
             }
 
             #menuknap {
@@ -295,7 +307,7 @@
                 width: 50%;
                 z-index: 3;
                 position: relative;
-                top: 35px;
+                top: 17px;
                 left: 25%;
 
             }
@@ -394,6 +406,14 @@
                 z-index: 3;
                 font-family: 'Titillium', sans-serif;
                 font-size: 21px;
+            }
+
+            nav.top a:hover {
+                text-decoration: underline;
+            }
+
+            nav.top a:active {
+                text-decoration: underline;
             }
 
 
@@ -525,7 +545,7 @@
         <nav class="top">
             <div id="menuknap">☰</div>
             <ul id="menu" class="hidden">
-                <li> <a href="filtrering.html">Drinks</a></li>
+                <li><a href="filtrering.html">Drinks</a></li>
                 <li><a href="filtrering.html">Inspiration</a></li>
                 <li><a href="#nyheder2">Nyheder</a></li>
             </ul>
