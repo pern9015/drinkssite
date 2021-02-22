@@ -21,6 +21,7 @@
         color: white;
         cursor: pointer;
         font-family: 'Montserrat', sans-serif;
+        top: 10px;
     }
 
     #menu {
@@ -167,23 +168,16 @@
         left: 50%;
         transform: translate(-50%, -50%);
 
-
-
-
     }
 
     article:hover .navn {
         opacity: 1;
     }
 
-
-
     .menu {
         position: relative;
 
     }
-
-
 
     #liste {
         display: grid;
@@ -193,6 +187,7 @@
     }
 
     @media (min-width: 800px) {
+
 
         #menu {
             list-style: none;
@@ -260,8 +255,6 @@
             grid-auto-flow: dense;
             grid-gap: 20px;
 
-
-
         }
 
         .menu {
@@ -276,6 +269,7 @@
         .menu:nth-child(5n) {
             grid-column: span 3;
         }
+
 </style>
 
 <body>
@@ -400,6 +394,9 @@
                 document.querySelector("#menuknap").textContent = "x";
             }
         }
+
     </script>
 
-</body></html>
+</body>
+
+</html>
