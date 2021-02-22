@@ -20,7 +20,7 @@
         font-size: 25px;
         color: white;
         cursor: pointer;
-        font-family: 'Montserrat', sans-serif;
+        top: 10px;
     }
 
     #menu {
@@ -30,22 +30,23 @@
         text-align: right;
         transition: transform 0.3s;
         list-style: none;
-        right: 10px;
         top: 30px;
+        left: 244px;
         cursor: pointer;
-        font-family: 'Montserrat', sans-serif;
 
     }
 
     li {
         padding-bottom: 10px;
-        padding: 10px;
-        font-family: 'Montserrat', sans-serif;
+        padding: 0px;
+        font-family: 'Titillium Web', sans-serif;
+
     }
 
     li:hover {
         text-decoration: underline;
     }
+
 
 
     .valgt {
@@ -55,11 +56,8 @@
 
     h1 {
         font-family: 'Inter', sans-serif;
-        text-align: center;
+        text-transform: uppercase;
         font-weight: 700;
-        color: white;
-        padding-bottom: 2rem;
-
     }
 
     h2 {
@@ -131,6 +129,11 @@
         background: #b3e1ff;
     }
 
+    h1 {
+        text-align: center;
+        color: white;
+    }
+
     h3 {
         font-size: 2rem;
         font-family: 'Open Sans', sans-serif;
@@ -144,6 +147,7 @@
     h3 {
         color: white;
     }
+
 
     img {
         width: 100%;
@@ -195,16 +199,70 @@
 
     }
 
+    @media (min-width: 500px) {
+        .logo {
+            width: 22%;
+            margin-left: -23px;
+            margin-top: 10px;
+        }
+
+        #menu {
+            position: absolute;
+            transform-origin: top right;
+            z-index: 2;
+            text-align: right;
+            transition: transform 0.3s;
+            list-style: none;
+            top: 3vw;
+            left: 71vw;
+            cursor: pointer;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+    }
+
+    @media (min-width: 700px) {
+        #menu {
+
+            position: absolute;
+            transform-origin: top right;
+            z-index: 2;
+            text-align: right;
+            transition: transform 0.3s;
+            list-style: none;
+            top: 30px;
+            left: 39em;
+            cursor: pointer;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+    }
+
+
     @media (min-width: 800px) {
 
         h1 {
             text-align: center;
+            color: white;
             font-size: 40px;
-            padding-top: 8rem;
+            padding-top: 0rem;
+
         }
 
         h2 {
             text-align: center;
+        }
+
+        .logo {
+            width: 10.6%;
+            margin-top: 0px;
+            margin-left: -17px;
         }
 
         #menu {
@@ -212,20 +270,20 @@
             flex-direction: row;
             display: flex;
             float: right;
-            margin-top: -30px;
-            font-family: 'Montserrat', sans-serif;
-            right: 43px;
-
-            top: 3vw;
+            margin-top: -37px;
+            font-family: 'Titillium Web', sans-serif;
+            top: 4vw;
             padding: 9px;
-        }
-
-        header {
-            padding-top: 25px;
+            margin-left: 22.7em;
         }
 
         #menuknap {
             display: none;
+        }
+
+
+        header {
+            padding-top: 25px;
         }
 
         #menu.hidden {
@@ -233,11 +291,6 @@
             opacity: 1;
         }
 
-        .logo {
-            width: 12%;
-            position: fixed;
-            z-index: 2;
-        }
 
         .filter {
             text-align: center;
@@ -270,7 +323,13 @@
         }
 
         nav.top a {
-            font-size: 20px;
+            color: white;
+            text-decoration: none;
+            margin: 25px;
+            position: relative;
+            z-index: 3;
+            font-family: 'Titillium web', sans-serif;
+            font-size: 25px;
         }
 
         #liste {
@@ -285,6 +344,7 @@
             grid-column: span 2;
 
         }
+
 
         .menu:nth-child(5n - 1) {
             grid-column: span 3;

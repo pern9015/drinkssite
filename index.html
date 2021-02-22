@@ -31,7 +31,7 @@
             font-size: 25px;
             color: white;
             cursor: pointer;
-            font-family: 'Montserrat', sans-serif;
+
         }
 
         #menu {
@@ -41,15 +41,15 @@
             text-align: right;
             transition: transform 0.3s;
             list-style: none;
-            top: 16vw;
-            left: 0vw;
+            top: 65px;
+            left: 0px;
             cursor: pointer;
-            font-family: 'Montserrat', sans-serif;
         }
 
         li {
             padding-bottom: 0vw;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Titillium web', sans-serif;
+
         }
 
         .nav_logo {
@@ -81,14 +81,9 @@
             margin: 8px;
             position: relative;
             z-index: 3;
-            font-family: 'Titillium', sans-serif;
+            font-family: 'Titillium web', sans-serif;
         }
 
-        /*
-        .top a:hover {
-            color: red;
-        }
-*/
 
         nav.top {
             text-align: right;
@@ -119,7 +114,7 @@
         }
 
         button {
-            font-family: 'Titillium', sans-serif;
+            font-family: 'Titillium web', sans-serif;
             font-weight: bold;
         }
 
@@ -127,6 +122,7 @@
             color: white;
             text-decoration: none;
         }
+
 
         #video_intro {
             height: 100%;
@@ -221,7 +217,7 @@
             background-repeat: no-repeat;
             background-size: cover;
             margin-top: 20px;
-            padding: 70px 0px 350px 0px;
+            padding: 0px 0px 400px 0px;
         }
 
         #nyheder2 h2 {
@@ -253,6 +249,86 @@
 
         @media (min-width: 500px) {
 
+            .nav_logo {
+                width: 20%;
+                float: left;
+                margin-top: 8px;
+                margin-left: -14.9em;
+                position: fixed;
+                z-index: 1;
+            }
+
+            button {
+                text-align: center;
+                color: white;
+                background-color: #131314;
+                border: 1px solid white;
+                padding: 10px;
+                margin: 20px 0 50px 182px;
+                font-size: 15px;
+            }
+
+            #menuknap {
+                position: absolute;
+                display: inline-block;
+                top: -3vw;
+                left: 43vw;
+                font-size: 25px;
+                color: white;
+                cursor: pointer;
+            }
+
+            #menu {
+                position: absolute;
+                transform-origin: top right;
+                z-index: 2;
+                text-align: right;
+                transition: transform 0.3s;
+                list-style: none;
+                top: -1vw;
+                left: 22vw;
+                cursor: pointer;
+            }
+
+            #video_intro {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                position: relative;
+                z-index: 2;
+                margin-top: -16em;
+            }
+
+            #nyheder2 {
+                background-image: url(drinks_nyheder.jpg);
+                background-attachment: fixed;
+                background-position: 0px 240px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin-top: 20px;
+                padding: 0px 0px 350px 0px;
+            }
+
+            input#email {
+                font-size: 15px;
+                margin: 0 0px 0 112px;
+                padding: 5px 120px 5px 10px;
+            }
+
+            #fourth_section button {
+                text-align: center;
+                color: white;
+                background-color: #131314;
+                border: 1px solid white;
+                padding: 10px;
+                margin: 20px 0 50px 195px;
+                font-size: 15px;
+            }
+        }
+
+        /*ipad-version i inspektor*/
+        @media (min-width: 700px) {
+
             p {
                 font-size: 25px;
             }
@@ -267,7 +343,8 @@
 
             li {
                 padding-bottom: 0vw;
-                font-family: 'Montserrat', sans-serif;
+                font-family: 'Titillium web', sans-serif;
+
             }
 
             #video_intro {
@@ -296,9 +373,9 @@
                 transition: transform 0.3s;
                 list-style: none;
                 top: -13vw;
-                left: 46vw;
+                left: 49vw;
                 cursor: pointer;
-                font-family: 'Montserrat', sans-serif;
+
             }
 
             #menuknap {
@@ -309,7 +386,7 @@
                 font-size: 25px;
                 color: white;
                 cursor: pointer;
-                font-family: 'Montserrat', sans-serif;
+
             }
 
             .logo {
@@ -346,6 +423,16 @@
                 padding: 5px 110px 5px 1px;
             }
 
+            #nyheder2 {
+                background-image: url(drinks_nyheder.jpg);
+                background-attachment: fixed;
+                background-position: 0px 240px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin-top: 20px;
+                padding: 0px 0px 550px 0px;
+            }
+
             #fourth_section button {
                 text-align: center;
                 color: white;
@@ -356,12 +443,14 @@
                 font-size: 21px;
             }
 
+
             .virgin {
                 position: absolute;
                 top: 505px;
                 left: 37px;
                 font-size: 27px;
                 text-transform: uppercase;
+                background-color: rgba(0, 0, 0, 0.86);
             }
 
             .bar {
@@ -370,6 +459,7 @@
                 left: 1px;
                 font-size: 28px;
                 text-transform: uppercase;
+                background-color: rgba(0, 0, 0, 0.56);
             }
 
         }
@@ -382,11 +472,17 @@
                 display: flex;
                 float: right;
                 margin-top: -48px;
-                font-family: 'Montserrat', sans-serif;
                 left: 26px;
+                font-family: 'Titillium Web', sans-serif;
                 top: -1vw;
                 padding: 9px;
+
             }
+
+            li {
+                font-family: 'Titillium web', sans-serif;
+            }
+
 
             #menuknap {
                 display: none;
@@ -409,11 +505,11 @@
             nav.top a {
                 color: white;
                 text-decoration: none;
-                margin: 28px;
+                margin: 25px;
                 position: relative;
                 z-index: 3;
-                font-family: 'Titillium', sans-serif;
-                font-size: 21px;
+                font-family: 'Titillium web', sans-serif;
+                font-size: 25px;
             }
 
             nav.top a:hover {
@@ -441,6 +537,7 @@
                 position: fixed;
                 z-index: 1;
             }
+
 
             #video_intro {
                 height: 100%;
@@ -539,6 +636,7 @@
             }
 
         }
+
     </style>
 </head>
 
@@ -615,5 +713,8 @@
                 document.querySelector("#menuknap").textContent = "x";
             }
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
