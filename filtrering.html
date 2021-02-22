@@ -8,6 +8,10 @@
 </head>
 
 <style>
+    html {
+        scroll-behavior: smooth;
+    }
+
     body {
         background-color: #141400;
     }
@@ -156,16 +160,15 @@
         .menu:nth-child(5n) {
             grid-column: span 3;
         }
-
 </style>
 
 <body>
     <header>
-        <a href=""><img src="logo1.png" alt="logo" class="logo"></a>
+        <a href="index.html"><img src="logo1.png" alt="logo" class="logo"></a>
         <nav class="top">
-            <a href="#data">Drinks</a>
+            <a href="#liste">Drinks</a>
             <a href="#liste">Inspiration</a>
-            <a href="#nyheder2">Nyheder</a>
+            <a href="index.html">Nyheder</a>
             <!--
             <div id="menuknap">☰</div>
             <ul id="menu" class="hidden">
@@ -263,9 +266,6 @@
         function visDrink(hvad) {
             location.href = `singleview.html?id=${hvad._id}`;
         }
-
     </script>
 
-</body>
-
-</html>
+</body></html>
