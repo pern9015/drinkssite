@@ -72,7 +72,7 @@
             z-index: 3;
             position: relative;
             top: 13px;
-            left: 28%;
+            left: 26%;
         }
 
         nav.top a {
@@ -98,7 +98,7 @@
         h1 {
             font-family: 'Inter', sans-serif;
             text-transform: uppercase;
-            font-weight: 700;
+            font-weight: 100;
         }
 
         h2 {
@@ -142,11 +142,13 @@
             color: white;
             text-align: center;
             margin: 25px 40px;
+            font-size: 16px;
         }
 
 
         #second_section h1 {
             margin-top: 50px;
+            font-size: 20px;
         }
 
         input#email {
@@ -208,9 +210,55 @@
         #nyheder2 h2 {
             padding: 7px;
             text-transform: uppercase;
+            font-size: 19px;
+        }
+
+
+        .overlay {
+            position: relative;
+        }
+
+        .virgin {
+            position: absolute;
+            top: 229px;
+            left: 3px;
+            font-size: 20px;
+            text-transform: uppercase;
+            background-color: rgba(0, 0, 0, 0.86);
+        }
+
+        .bar {
+            position: absolute;
+            top: 230px;
+            left: 3px;
+            font-size: 20px;
+            text-transform: uppercase;
+            background-color: rgba(0, 0, 0, 0.56);
         }
 
         @media (min-width: 500px) {
+
+            p {
+                font-size: 25px;
+            }
+
+            #second_section h1 {
+                font-size: 30px;
+            }
+
+            #nyheder2 h2 {
+                font-size: 30px;
+            }
+
+            #video_intro {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                position: relative;
+                z-index: 2;
+                margin-top: -23em;
+            }
+
             .nav_logo {
                 width: 20%;
                 float: left;
@@ -220,26 +268,25 @@
                 z-index: 1;
             }
 
+            #menu {
+                list-style: none;
+                flex-direction: row;
+                display: flex;
+                float: right;
+                margin-top: -48px;
+                font-family: 'Montserrat', sans-serif;
+                left: 0;
+                top: 4vw;
+                padding: 9px;
+            }
+
             #menuknap {
                 position: absolute;
                 display: inline-block;
-                top: -2vw;
-                left: 44vw;
+                top: -16vw;
+                left: 62vw;
                 font-size: 25px;
                 color: white;
-                cursor: pointer;
-                font-family: 'Montserrat', sans-serif;
-            }
-
-            #menu {
-                position: absolute;
-                transform-origin: top right;
-                z-index: 2;
-                text-align: right;
-                transition: transform 0.3s;
-                list-style: none;
-                top: 1vw;
-                left: 23vw;
                 cursor: pointer;
                 font-family: 'Montserrat', sans-serif;
             }
@@ -251,7 +298,15 @@
                 top: 35px;
                 left: 25%;
 
+            }
 
+            .nav_logo {
+                width: 20%;
+                float: left;
+                margin-top: 26px;
+                margin-left: -22em;
+                position: fixed;
+                z-index: 1;
             }
 
             button {
@@ -260,13 +315,13 @@
                 background-color: #131314;
                 border: 1px solid white;
                 padding: 10px;
-                margin: 20px 0 50px 170px;
-                font-size: 15px;
+                margin: 20px 0 50px 289px;
+                font-size: 20px;
             }
 
             input#email {
-                font-size: 15px;
-                margin: 0 0px 0 20px;
+                font-size: 25px;
+                margin: 0 0px 0 91px;
                 padding: 5px 110px 5px 1px;
             }
 
@@ -277,17 +332,27 @@
                 border: 1px solid white;
                 padding: 10px;
                 margin: 20px 0 50px 10px;
-                font-size: 15px;
+                font-size: 21px;
             }
 
-            .overlay p {
-                font-size: 25px;
+            .virgin {
+                position: absolute;
+                top: 505px;
+                left: 37px;
+                font-size: 27px;
                 text-transform: uppercase;
-                margin-top: -150px;
-                margin-bottom: 150px;
-                background-color: rgba(0, 0, 0, 0.37);
-                z-index: 2;
+                background-color: rgba(0, 0, 0, 0.86);
             }
+
+            .bar {
+                position: absolute;
+                top: 480px;
+                left: 1px;
+                font-size: 28px;
+                text-transform: uppercase;
+                background-color: rgba(0, 0, 0, 0.56);
+            }
+
         }
 
         @media (min-width: 800px) {
@@ -298,8 +363,8 @@
                 float: right;
                 margin-top: -48px;
                 font-family: 'Montserrat', sans-serif;
-                left: 0;
-                top: 4vw;
+                left: 26px;
+                top: -1vw;
                 padding: 9px;
             }
 
@@ -328,7 +393,7 @@
                 position: relative;
                 z-index: 3;
                 font-family: 'Titillium', sans-serif;
-                font-size: 27px;
+                font-size: 21px;
             }
 
 
@@ -336,7 +401,7 @@
                 width: 50%;
                 z-index: 3;
                 position: relative;
-                top: 95px;
+                top: 42px;
                 left: 25%;
             }
 
@@ -355,7 +420,7 @@
                 object-fit: cover;
                 position: relative;
                 z-index: 2;
-                margin-top: -42em;
+                margin-top: -45.5em;
             }
 
             video {
@@ -386,6 +451,24 @@
                 grid-template-columns: 1fr 1fr;
                 grid-gap: 50px;
                 margin: 0 50px 50px 50px;
+            }
+
+            .virgin {
+                position: absolute;
+                top: 505px;
+                left: 37px;
+                font-size: 27px;
+                text-transform: uppercase;
+                background-color: rgba(0, 0, 0, 0.86);
+            }
+
+            .bar {
+                position: absolute;
+                top: 501px;
+                left: 1px;
+                font-size: 28px;
+                text-transform: uppercase;
+                background-color: rgba(0, 0, 0, 0.56);
             }
 
             .nyhed_img2 {
@@ -428,16 +511,16 @@
                 margin: 0 0px 0 20px;
                 padding: 5px 110px 5px 1px;
             }
-        }
 
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <a href=""><img src="logo1.png" alt="logo" class="logo"></a>
+        <a href=""><img src="drinklogo2.png" alt="logo" class="logo"></a>
 
-        <a href="index.html"><img src="logo1.png" alt="logo" class="nav_logo"></a>
+        <a href="index.html"><img src="drinklogo2.png" alt="logo" class="nav_logo"></a>
 
         <nav class="top">
             <div id="menuknap">☰</div>
@@ -463,11 +546,11 @@
     <section id="third_section">
         <div class="overlay">
             <a href="filtrering.html"><img src="kevin-kelly-PPneSBqfCCU-unsplash.jpg" alt="rose"></a>
-            <p>Prøv vores helt nye virgin cocktails og drinks</p>
+            <p class="virgin">Prøv vores helt nye virgin cocktails og drinks</p>
         </div>
         <div class="overlay">
             <a href="filtrering.html"><img src="MARGARITA.jpg" alt="magaritta"></a>
-            <p>Få den helt ægte bar stemning hjemme fra stuen af</p>
+            <p class="bar">Få den helt ægte bar stemning hjemme fra stuen af</p>
         </div>
     </section>
 
@@ -506,8 +589,5 @@
                 document.querySelector("#menuknap").textContent = "x";
             }
         }
-
     </script>
-</body>
-
-</html>
+</body></html>
