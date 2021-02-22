@@ -18,14 +18,49 @@
             margin: 0px;
         }
 
+        .hidden {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+
+        #menuknap {
+            position: absolute;
+            display: inline-block;
+            top: 13vw;
+            left: 26vw;
+            font-size: 25px;
+            color: white;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        #menu {
+            position: absolute;
+            transform-origin: top right;
+            z-index: 2;
+            text-align: right;
+            transition: transform 0.3s;
+            list-style: none;
+            top: 16vw;
+            left: 0vw;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        li {
+            padding-bottom: 0vw;
+            font-family: 'Montserrat', sans-serif;
+        }
+
         .nav_logo {
             width: 20%;
             float: left;
-            margin-top: 12px;
-            margin-left: -15em;
+            margin-top: 15px;
+            margin-left: -10.9em;
             position: fixed;
             z-index: 1;
         }
+
 
         .menu {
             position: relative;
@@ -36,9 +71,8 @@
             width: 50%;
             z-index: 3;
             position: relative;
-            top: 35px;
-            left: 25%;
-
+            top: 13px;
+            left: 28%;
         }
 
         nav.top a {
@@ -117,8 +151,8 @@
 
         input#email {
             font-size: 15px;
-            margin: 0 0px 0 20px;
-            padding: 5px 110px 5px 1px;
+            margin: 0 0px 0 42px;
+            padding: 5px 120px 5px 10px;
         }
 
         button {
@@ -127,7 +161,7 @@
             background-color: #131314;
             border: 1px solid white;
             padding: 10px;
-            margin: 20px 0 50px 170px;
+            margin: 20px 0 50px 112px;
             font-size: 15px;
         }
 
@@ -137,9 +171,10 @@
             background-color: #131314;
             border: 1px solid white;
             padding: 10px;
-            margin: 20px 0 50px 10px;
+            margin: 20px 0 50px 125px;
             font-size: 15px;
         }
+
 
         img {
             width: 100%
@@ -175,8 +210,107 @@
             text-transform: uppercase;
         }
 
+        @media (min-width: 500px) {
+            .nav_logo {
+                width: 20%;
+                float: left;
+                margin-top: 12px;
+                margin-left: -15em;
+                position: fixed;
+                z-index: 1;
+            }
+
+            #menuknap {
+                position: absolute;
+                display: inline-block;
+                top: -2vw;
+                left: 44vw;
+                font-size: 25px;
+                color: white;
+                cursor: pointer;
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            #menu {
+                position: absolute;
+                transform-origin: top right;
+                z-index: 2;
+                text-align: right;
+                transition: transform 0.3s;
+                list-style: none;
+                top: 1vw;
+                left: 23vw;
+                cursor: pointer;
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            .logo {
+                width: 50%;
+                z-index: 3;
+                position: relative;
+                top: 35px;
+                left: 25%;
+
+
+            }
+
+            button {
+                text-align: center;
+                color: white;
+                background-color: #131314;
+                border: 1px solid white;
+                padding: 10px;
+                margin: 20px 0 50px 170px;
+                font-size: 15px;
+            }
+
+            input#email {
+                font-size: 15px;
+                margin: 0 0px 0 20px;
+                padding: 5px 110px 5px 1px;
+            }
+
+            #fourth_section button {
+                text-align: center;
+                color: white;
+                background-color: #131314;
+                border: 1px solid white;
+                padding: 10px;
+                margin: 20px 0 50px 10px;
+                font-size: 15px;
+            }
+
+            .overlay p {
+                font-size: 25px;
+                text-transform: uppercase;
+                margin-top: -150px;
+                margin-bottom: 150px;
+                background-color: rgba(0, 0, 0, 0.37);
+                z-index: 2;
+            }
+        }
 
         @media (min-width: 800px) {
+            #menu {
+                list-style: none;
+                flex-direction: row;
+                display: flex;
+                float: right;
+                margin-top: -48px;
+                font-family: 'Montserrat', sans-serif;
+                left: 0;
+                top: 4vw;
+                padding: 9px;
+            }
+
+            #menuknap {
+                display: none;
+            }
+
+            #menu.hidden {
+                transform: translateX(0);
+                opacity: 1;
+            }
 
             nav.top {
                 text-align: right;
@@ -306,10 +440,12 @@
         <a href="index.html"><img src="logo1.png" alt="logo" class="nav_logo"></a>
 
         <nav class="top">
-            <a href="filtrering.html">Drinks</a>
-            <a href="filtrering.html">Inspiration</a>
-            <a href="#nyheder2">Nyheder</a>
-
+            <div id="menuknap">☰</div>
+            <ul id="menu" class="hidden">
+                <li> <a href="filtrering.html">Drinks</a></li>
+                <li><a href="filtrering.html">Inspiration</a></li>
+                <li><a href="#nyheder2">Nyheder</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -325,8 +461,14 @@
     </section>
 
     <section id="third_section">
-        <img src="kevin-kelly-PPneSBqfCCU-unsplash.jpg" alt="rose">
-        <img src="MARGARITA.jpg" alt="magaritta">
+        <div class="overlay">
+            <a href="filtrering.html"><img src="kevin-kelly-PPneSBqfCCU-unsplash.jpg" alt="rose"></a>
+            <p>Prøv vores helt nye virgin cocktails og drinks</p>
+        </div>
+        <div class="overlay">
+            <a href="filtrering.html"><img src="MARGARITA.jpg" alt="magaritta"></a>
+            <p>Få den helt ægte bar stemning hjemme fra stuen af</p>
+        </div>
     </section>
 
     <section id="fourth_section">
@@ -341,6 +483,31 @@
         </div>
     </section>
 
+
+    <script>
+        window.addEventListener("load", sidenVises);
+
+        function sidenVises() {
+            console.log("sidenVises");
+
+            document.querySelector("#menuknap").addEventListener("click", toggleMenu);
+        }
+
+        function toggleMenu() {
+            console.log("toggleMenu")
+
+            document.querySelector("#menu").classList.toggle("hidden");
+
+            let erSkjult = document.querySelector("#menu").classList.contains("hidden");
+
+            if (erSkjult == true) {
+                document.querySelector("#menuknap").textContent = "☰";
+            } else {
+                document.querySelector("#menuknap").textContent = "x";
+            }
+        }
+
+    </script>
 </body>
 
 </html>
