@@ -9,19 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&family=Open+Sans:wght@300;400;600&family=Titillium+Web:wght@200;300;400;600&display=swap" rel="stylesheet">
 </head>
 <style>
-    @font-face {
-        font-family: neon;
-        src: url(neon____-webfont.woff2);
-    }
-
     @media (min-width: 300px) {
 
         main {
             padding-top: 3rem;
-        }
-
-        header {
-            padding-top: 2rem;
         }
 
         header a {
@@ -56,8 +47,7 @@
         }
 
         body {
-            margin: 10px;
-            background-color: rgb(0, 0, 0);
+            background-color: #131314;
         }
 
 
@@ -111,7 +101,7 @@
             font-family: 'Titillium Web';
             margin: 0 0.3em 0.3em 0;
             transition: all 0.15s;
-            background-color: black;
+            background-color: #131314;
             border: none;
             text-decoration: underline;
             font-size: 13px;
@@ -158,6 +148,11 @@
 
     @media (min-width: 1000px) {
 
+        header {
+            padding-top: 4px;
+            padding-left: 21px;
+        }
+
         #menu {
             display: grid;
             grid-template-columns: 1fr 1.5fr;
@@ -169,37 +164,39 @@
             font-size: 3rem;
         }
 
+        p {
+            font-size: 18px;
+            line-height: 35px;
+        }
+
         main {
-            padding-top: 0;
+            padding-top: 1em;
         }
 
 
         .fuldhedsskala {
             width: 50%;
             position: relative;
-            right: -100px;
+            right: -189px;
         }
 
         .logo {
-            width: 10%;
+            width: 12%;
         }
 
         .billede {
-            width: 100%;
-
+            padding-top: 4rem;
         }
 
         nav.top {
             text-align: right;
+            margin-top: -157px;
+            margin-right: 50px;
         }
 
         nav.top a {
             font-size: 20px;
-        }
-
-        body {
-            margin: 50px;
-            background-color: rgb(0, 0, 0);
+            padding: 10px;
         }
 
         .img {
@@ -226,23 +223,26 @@
             font-family: 'Titillium Web';
             margin: 0 0.3em 0.3em 0;
             transition: all 0.15s;
-            background-color: black;
             border: none;
             text-decoration: underline;
             font-size: 17px;
+        }
+
+        .fuldhed {
+            text-align: center;
+            font-size: 20px;
         }
 
         .udgift {
             font-size: 30px;
         }
     }
-
 </style>
 
 <body>
 
     <header>
-        <a href="index.html"><img src="logo1.png" alt="logo" class="logo"></a>
+        <a href="index.html"><img src="drinklogo2.png" alt="logo" class="logo"></a>
         <nav class="top">
             <a href="filtrering.html">Drinks</a>
             <a href="filtrering.html">Inspiration</a>
@@ -265,6 +265,7 @@
 -->
                 <p class="fremgangsmåde">Fremgangsmåde:</p>
                 <p class="udgift"></p>
+                <p class="fuldhed">Fuldhedsskala:</p>
                 <img src="" alt="" class="fuldhedsskala">
             </div>
         </article>
@@ -312,8 +313,5 @@
             //history = webapi for at komme baglængs, hvis vi kalder back kommer vi et hak tilbage i browserhistorien (dermed tilbage til 01-kald.html)
             history.back();
         }
-
     </script>
-</body>
-
-</html>
+</body></html>

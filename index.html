@@ -31,7 +31,7 @@
             font-size: 25px;
             color: white;
             cursor: pointer;
-
+            font-family: 'Montserrat', sans-serif;
         }
 
         #menu {
@@ -44,13 +44,12 @@
             top: 16vw;
             left: 0vw;
             cursor: pointer;
-
+            font-family: 'Montserrat', sans-serif;
         }
 
         li {
             padding-bottom: 0vw;
-            font-family: 'Titillium', sans-serif;
-
+            font-family: 'Montserrat', sans-serif;
         }
 
         .nav_logo {
@@ -158,6 +157,17 @@
             font-size: 20px;
         }
 
+        .billede_third {
+            opacity: 1;
+            display: block;
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
+
+        .billede_third:hover {
+            opacity: 0.3;
+        }
+
         input#email {
             font-size: 15px;
             margin: 0 0px 0 42px;
@@ -231,7 +241,6 @@
             left: 3px;
             font-size: 20px;
             text-transform: uppercase;
-            background-color: rgba(0, 0, 0, 0.86);
         }
 
         .bar {
@@ -240,7 +249,6 @@
             left: 3px;
             font-size: 20px;
             text-transform: uppercase;
-            background-color: rgba(0, 0, 0, 0.56);
         }
 
         @media (min-width: 500px) {
@@ -259,8 +267,7 @@
 
             li {
                 padding-bottom: 0vw;
-                font-family: 'Titillium', sans-serif;
-
+                font-family: 'Montserrat', sans-serif;
             }
 
             #video_intro {
@@ -291,7 +298,7 @@
                 top: -13vw;
                 left: 46vw;
                 cursor: pointer;
-
+                font-family: 'Montserrat', sans-serif;
             }
 
             #menuknap {
@@ -302,7 +309,7 @@
                 font-size: 25px;
                 color: white;
                 cursor: pointer;
-
+                font-family: 'Montserrat', sans-serif;
             }
 
             .logo {
@@ -355,7 +362,6 @@
                 left: 37px;
                 font-size: 27px;
                 text-transform: uppercase;
-                background-color: rgba(0, 0, 0, 0.86);
             }
 
             .bar {
@@ -364,29 +370,23 @@
                 left: 1px;
                 font-size: 28px;
                 text-transform: uppercase;
-                background-color: rgba(0, 0, 0, 0.56);
             }
 
         }
 
         @media (min-width: 800px) {
+
             #menu {
                 list-style: none;
                 flex-direction: row;
                 display: flex;
                 float: right;
                 margin-top: -48px;
+                font-family: 'Montserrat', sans-serif;
                 left: 26px;
-                font-family: 'Titillium Web', sans-serif;
                 top: -1vw;
                 padding: 9px;
-
             }
-
-            li {
-                font-family: 'Titillium', sans-serif;
-            }
-
 
             #menuknap {
                 display: none;
@@ -406,7 +406,7 @@
                 z-index: 4;
             }
 
-            /*nav.top a {
+            nav.top a {
                 color: white;
                 text-decoration: none;
                 margin: 28px;
@@ -414,7 +414,7 @@
                 z-index: 3;
                 font-family: 'Titillium', sans-serif;
                 font-size: 21px;
-            }*/
+            }
 
             nav.top a:hover {
                 text-decoration: underline;
@@ -487,16 +487,14 @@
                 left: 37px;
                 font-size: 27px;
                 text-transform: uppercase;
-                background-color: rgba(0, 0, 0, 0.86);
             }
 
             .bar {
                 position: absolute;
-                top: 501px;
-                left: 1px;
+                top: 520px;
+                left: 35px;
                 font-size: 28px;
                 text-transform: uppercase;
-                background-color: rgba(0, 0, 0, 0.56);
             }
 
             .nyhed_img2 {
@@ -567,18 +565,18 @@
     <section id="second_section">
         <h1>Great drinks bring us together</h1>
         <p>Hos Drink Up tror vi på at kvaliteten af drinksene, er med til at skabe
-            den helt unikke drink til lige præcis den stemning du ønsker.</p>
+            den helt unikke drink til lige præcis den stemning du ønsker. <br>Vi tilbyder opskrifter til </p>
         <button> <a href="filtrering.html">Vælg din drink her!</a></button>
     </section>
 
     <section id="third_section">
         <div class="overlay">
-            <a href="filtrering.html"><img src="kevin-kelly-PPneSBqfCCU-unsplash.jpg" alt="rose"></a>
-            <p class="virgin">Prøv vores helt nye virgin cocktails og drinks</p>
+            <a href="filtrering.html"><img src="kevin-kelly-PPneSBqfCCU-unsplash.jpg" class="billede_third" alt="rose"></a>
+            <p class="virgin">Prøv opskrifterne til vores helt nye virgin cocktails og drinks</p>
         </div>
         <div class="overlay">
-            <a href="filtrering.html"><img src="MARGARITA.jpg" alt="magaritta"></a>
-            <p class="bar">Få den helt ægte bar stemning hjemme fra stuen af</p>
+            <a href="filtrering.html"><img src="MARGARITA.jpg" class="billede_third" alt="magaritta"></a>
+            <p class="bar">Hvilken drink skal du hjem og lave?</p>
         </div>
     </section>
 
