@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drinks - listeview</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&family=Open+Sans:wght@300;400;600&family=Titillium+Web:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mutual.css">
 </head>
 
 <style>
-    html,
+    /* html,
     body {
         overflow-x: hidden;
     }
@@ -24,18 +25,19 @@
         background-color: #131314;
         margin-left: 40px;
         margin-right: 40px;
-    }
+    }*/
 
     /*-------------Menu/navigation-----------------------*/
 
     /*gemmer menupunkterne i burgermenuen*/
 
-    .hidden {
+    /*.hidden {
         opacity: 0;
         transform: translateX(100%);
     }
 
     /*Giver burgermenuen en placering og styling*/
+    /*
     #menuknap {
         position: absolute;
         display: inline-block;
@@ -44,8 +46,10 @@
         cursor: pointer;
         top: 10px;
     }
+*/
 
     /*Giver menupunkterne i burgermenuen en placering, styling og en slide ind effekt*/
+    /*
     #menu {
         position: absolute;
         transform-origin: top right;
@@ -66,8 +70,10 @@
         font-family: 'Titillium Web', sans-serif;
 
     }
+*/
 
     /*Giver menupunkterne/linksene en underline når man har musen henover*/
+    /*
     li:hover {
         text-decoration: underline;
     }
@@ -90,6 +96,7 @@
         margin-top: -80px;
         margin-bottom: 90px;
     }
+*/
 
 
     /*----------------filtrering-----------------------*/
@@ -264,6 +271,8 @@
             text-align: center;
         }
 
+        /*
+
         .logo {
             width: 10.6%;
             margin-top: 0px;
@@ -295,6 +304,7 @@
             transform: translateX(0);
             opacity: 1;
         }
+*/
 
 
         .filter {
@@ -302,25 +312,14 @@
         }
 
         button {
-            background-color: #131314;
-            display: inline-block;
-            color: white;
             width: 60px;
             height: 60px;
             line-height: 60px;
-            border-radius: 50%;
-            border: solid 2px #668ad8;
-            text-align: center;
-            overflow: hidden;
-            transition: .4s;
-            box-shadow: 0 0 10px #9ecaed;
-            margin-left: 20px;
-            cursor: pointer;
             margin-top: 40px;
-
 
         }
 
+        /*
         nav.top {
             text-align: right;
             margin-top: -250px;
@@ -336,6 +335,7 @@
             font-family: 'Titillium web', sans-serif;
             font-size: 25px;
         }
+        */
 
         #liste {
             display: grid;
@@ -344,6 +344,7 @@
             grid-gap: 20px;
 
         }
+
 
         .menu {
             grid-column: span 2;
@@ -386,6 +387,7 @@
         <header>
             <h2>Alle</h2>
         </header>
+
 
 
         <section id="liste"></section>

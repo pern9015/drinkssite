@@ -1,0 +1,138 @@
+  html,
+  body {
+      overflow-x: hidden;
+  }
+
+
+  html {
+      scroll-behavior: smooth;
+
+  }
+
+  body {
+      background-color: #131314;
+      margin-left: 40px;
+      margin-right: 40px;
+  }
+
+  /*-------------Menu/navigation-----------------------*/
+
+  /*gemmer menupunkterne i burgermenuen*/
+
+  .hidden {
+      opacity: 0;
+      transform: translateX(100%);
+  }
+
+  /*Giver burgermenuen en placering og styling*/
+  #menuknap {
+      position: absolute;
+      display: inline-block;
+      font-size: 25px;
+      color: white;
+      cursor: pointer;
+      top: 10px;
+  }
+
+  /*Giver menupunkterne i burgermenuen en placering, styling og en slide ind effekt*/
+  #menu {
+      position: absolute;
+      transform-origin: top right;
+      z-index: 2;
+      text-align: right;
+      transition: transform 0.3s;
+      list-style: none;
+      right: 10px;
+      top: 30px;
+      cursor: pointer;
+
+  }
+
+
+  li {
+      padding-bottom: 10px;
+      padding: 0px;
+      font-family: 'Titillium Web', sans-serif;
+
+  }
+
+  /*Giver menupunkterne/linksene en underline når man har musen henover*/
+  li:hover {
+      text-decoration: underline;
+  }
+
+  .logo {
+      width: 20%;
+      position: fixed;
+      z-index: 2;
+
+
+
+  }
+
+  nav.top a {
+      color: white;
+      text-decoration: none;
+      margin: 8px;
+  }
+
+  nav.top {
+      text-align: right;
+      margin-top: -80px;
+      margin-bottom: 90px;
+  }
+
+  @media (min-width: 800px) {
+
+
+      .logo {
+          /*          width: 10.6%;*/
+          width: 160px;
+          position: fixed;
+          z-index: 2;
+          top: 18px;
+          ;
+      }
+
+      #menu {
+          list-style: none;
+          flex-direction: row;
+          display: flex;
+          float: right;
+          margin-top: -37px;
+          font-family: 'Titillium Web', sans-serif;
+          top: 50px;
+          padding: 9px;
+          margin-left: 22.7em;
+      }
+
+      #menuknap {
+          display: none;
+      }
+
+
+      header {
+          padding-top: 25px;
+      }
+
+      #menu.hidden {
+          transform: translateX(0);
+          opacity: 1;
+      }
+
+
+      nav.top {
+          text-align: right;
+          margin-top: -250px;
+          margin-bottom: 260px;
+      }
+
+      nav.top a {
+          color: white;
+          text-decoration: none;
+          margin: 25px;
+          position: relative;
+          z-index: 3;
+          font-family: 'Titillium web', sans-serif;
+          font-size: 25px;
+      }
