@@ -68,7 +68,7 @@
     }
 
     .fremgangsmåde {
-        line-height: 20px;
+        line-height: 25px;
     }
 
     .img {
@@ -83,14 +83,12 @@
     }
 
     .opskrift {
-        bottom: -50px;
-        right: 230px;
         background-color: rgba(255, 165, 0, 0.53);
-        padding: 0.5rem;
-        line-height: 20px;
+        padding: 2px;
+        line-height: 25px;
+        padding-left: 10px;
+        padding-top: 13px;
     }
-
-
 
     .udgift {
         font-size: 20px;
@@ -98,14 +96,14 @@
     }
 
 
-    @media (min-width: 800px) {
+    @media (min-width: 850px) {
 
         /*---------------grid på desktop--------------------*/
 
         #drinks {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 25% 75%;
+            grid-template-columns: 1.5fr 1fr;
+            grid-template-rows: 0.5fr 2fr;
             padding-bottom: 1rem;
             grid-gap: 25px;
         }
@@ -129,11 +127,14 @@
 
         }
 
+
+
+
         /*----------------tekst i desktop-------------------*/
 
         h3 {
             font-size: 3rem;
-            margin-bottom: 0;
+            margin-bottom: 11px;
         }
 
         p {
@@ -157,12 +158,7 @@
         }
 
         .opskrift {
-            position: absolute;
-            bottom: -70px;
-            right: -60px;
-            background-color: rgba(255, 165, 0, 0.53);
-            padding: 1rem;
-            line-height: 25px;
+            margin-top: -18px;
         }
 
         .knap {
@@ -186,6 +182,7 @@
             font-size: 30px;
         }
     }
+
 </style>
 
 <body>
@@ -211,7 +208,8 @@
 
             <div class="img">
                 <img src="" alt="" class="billede">
-                <p class="opskrift"></p>
+
+
             </div>
             <div class="tekst">
 
@@ -219,11 +217,16 @@
                 <!--
                 <h3 class="alkoholtype">
                 </h3>
+
+
 -->
+                <p class="opskrift"></p>
                 <p class="fremgangsmåde">Fremgangsmåde:</p>
                 <p class="udgift"></p>
                 <p class="fuldhed">Fuldhedsskala:</p>
                 <img src="" alt="" class="fuldhedsskala">
+
+
             </div>
         </article>
         <div class="knap">
@@ -258,9 +261,11 @@
             document.querySelector(".billede").src = medieurl + menu.Billede;
             document.querySelector(".navn").textContent = menu.Navn;
             document.querySelector(".fremgangsmåde").textContent = menu.Fremgangsmåde;
-            document.querySelector(".opskrift").innerHTML = menu.opskrift;
-            document.querySelector(".udgift").textContent =
-                menu.udgift;
+            document.querySelector(".opskrift").innerHTML = `Ingredienser: ${menu.opskrift} `;
+            document.querySelector(".udgift").textContent = `Estimeret pris: ${menu.udgift} `;
+
+
+
             document.querySelector(".fuldhedsskala").src = medieurl + menu.fuldhedsskala;
             //eventlistener på tilbageknappen
             document.querySelector("button").addEventListener("click", tilbageTilDrinksGalleri);
@@ -292,5 +297,8 @@
                 document.querySelector("#menuknap").textContent = "x";
             }
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
