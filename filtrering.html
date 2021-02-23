@@ -9,11 +9,33 @@
 </head>
 
 <style>
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+
+    html {
+        scroll-behavior: smooth;
+
+    }
+
+    body {
+        background-color: #131314;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    /*-------------Menu/navigation-----------------------*/
+
+    /*gemmer menupunkterne i burgermenuen*/
+
     .hidden {
         opacity: 0;
         transform: translateX(100%);
     }
 
+    /*Giver burgermenuen en placering og styling*/
     #menuknap {
         position: absolute;
         display: inline-block;
@@ -23,6 +45,7 @@
         top: 10px;
     }
 
+    /*Giver menupunkterne i burgermenuen en placering, styling og en slide ind effekt*/
     #menu {
         position: absolute;
         transform-origin: top right;
@@ -30,11 +53,12 @@
         text-align: right;
         transition: transform 0.3s;
         list-style: none;
+        right: 10px;
         top: 30px;
-        left: 244px;
         cursor: pointer;
 
     }
+
 
     li {
         padding-bottom: 10px;
@@ -43,46 +67,10 @@
 
     }
 
+    /*Giver menupunkterne/linksene en underline når man har musen henover*/
     li:hover {
         text-decoration: underline;
     }
-
-
-
-    .valgt {
-        background-color: #9ecaed;
-    }
-
-
-    h1 {
-        font-family: 'Inter', sans-serif;
-        text-transform: uppercase;
-        font-weight: 700;
-        padding-top: 7rem;
-        text-align: center;
-    }
-
-    h2 {
-        font-family: 'Inter', sans-serif;
-        font-weight: 500;
-    }
-
-    p {
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 300;
-    }
-
-
-    html {
-        scroll-behavior: smooth;
-    }
-
-    body {
-        background-color: #131314;
-        margin-left: 40px;
-        margin-right: 40px;
-    }
-
 
     .logo {
         width: 20%;
@@ -104,11 +92,16 @@
     }
 
 
-    .filter {
-        text-align: center;
+    /*----------------filtrering-----------------------*/
+
+
+
+    /*Giver baggrundsfarve til den valgte kategori*/
+    .valgt {
+        background-color: #b3e1ff;
     }
 
-
+    /*Styling af filtreringsknapperne*/
     button {
         background-color: #131314;
         display: inline-block;
@@ -133,25 +126,41 @@
         background: #b3e1ff;
     }
 
-    h1 {
+
+    .filter {
         text-align: center;
+    }
+
+    /*----------------Tekst-----------------------*/
+
+
+    h1 {
+        font-family: 'Inter', sans-serif;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding-top: 7rem;
+        text-align: center;
+        color: white;
+    }
+
+    h2 {
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
         color: white;
     }
 
     h3 {
         font-size: 2rem;
         font-family: 'Open Sans', sans-serif;
-    }
-
-    h2 {
-        font-family: 'Inter', sans-serif;
-    }
-
-    h2,
-    h3 {
         color: white;
     }
 
+    p {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+    }
+
+    /*----------------Billeder-----------------------*/
 
     img {
         width: 100%;
@@ -178,23 +187,15 @@
         left: 50%;
         transform: translate(-50%, -50%);
 
-
-
-
     }
 
     article:hover .navn {
         opacity: 1;
     }
 
-
-
     .menu {
         position: relative;
-
     }
-
-
 
     #liste {
         display: grid;
@@ -203,7 +204,7 @@
 
     }
 
-    @media (min-width: 500px) {
+    /*  @media (min-width: 500px) {
         .logo {
             width: 22%;
             margin-left: -23px;
@@ -228,7 +229,7 @@
         }
     }
 
-    @media (min-width: 700px) {
+  @media (min-width: 700px) {
         #menu {
 
             position: absolute;
@@ -246,7 +247,7 @@
             text-align: center;
             color: white;
         }
-    }
+    }*/
 
 
     @media (min-width: 800px) {
@@ -276,7 +277,7 @@
             float: right;
             margin-top: -37px;
             font-family: 'Titillium Web', sans-serif;
-            top: 4vw;
+            top: 50px;
             padding: 9px;
             margin-left: 22.7em;
         }
@@ -357,7 +358,6 @@
         .menu:nth-child(5n) {
             grid-column: span 3;
         }
-
 </style>
 
 <body>
@@ -484,9 +484,6 @@
                 document.querySelector("#menuknap").textContent = "x";
             }
         }
-
     </script>
 
-</body>
-
-</html>
+</body></html>
