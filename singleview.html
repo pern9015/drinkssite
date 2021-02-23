@@ -15,60 +15,14 @@
 
     }
 
-    header a {
-        font-family: 'Titillium Web';
-    }
 
-
-    #drinks {
-        padding-bottom: 1rem;
-        margin: 10px;
-    }
-
-    .fuldhed {
-        text-align: center;
-
-    }
-
-    /*
-
-        .logo {
-            width: 30%;
-        }
-
-        nav.top a {
-            color: white;
-            text-decoration: none;
-            margin: 8px;
-        }
-*/
-
-    img {
-        width: 100%;
-    }
-
-    /*
-        nav.top {
-            text-align: right;
-            margin-top: -120px;
-            margin-bottom: 90px;
-        }
-*/
-
-    body {
-        background-color: #131314;
-    }
-
+    /*--------------tekst mobile-------------------*/
 
     h3 {
         padding-top: 20px;
         font-size: 30px;
         text-align: center;
         font-family: 'Inter';
-    }
-
-    .fremgangsmåde {
-        line-height: 20px;
     }
 
     h2,
@@ -82,29 +36,11 @@
         font-size: 13px;
     }
 
-
-    .img {
-        position: relative;
-    }
-
-
     .text {
         margin: 3rem;
     }
 
-    .fuldhedsskala {
-        width: 50%;
-        position: relative;
-        right: -80px;
-    }
-
-    .opskrift {
-        bottom: -50px;
-        right: 230px;
-        background-color: rgba(255, 165, 0, 0.53);
-        padding: 0.5rem;
-        line-height: 20px;
-    }
+    /*--------------knap mobile-------------------*/
 
     button {
         cursor: pointer;
@@ -118,16 +54,53 @@
         font-size: 13px;
     }
 
+    /*---------------------------------*/
+
+
+
+    #drinks {
+        padding-bottom: 1rem;
+        margin: 10px;
+    }
+
+    .fuldhed {
+        text-align: center;
+    }
+
+    .fremgangsmåde {
+        line-height: 20px;
+    }
+
+    .img {
+        position: relative;
+    }
+
+    .fuldhedsskala {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    .opskrift {
+        bottom: -50px;
+        right: 230px;
+        background-color: rgba(255, 165, 0, 0.53);
+        padding: 0.5rem;
+        line-height: 20px;
+    }
+
+
+
     .udgift {
         font-size: 20px;
         text-align: center;
     }
 
 
-
     @media (min-width: 800px) {
 
-        /*---------------grid--------------------*/
+        /*---------------grid på desktop--------------------*/
 
         #drinks {
             display: grid;
@@ -156,10 +129,11 @@
 
         }
 
-        /*-----------------------------------*/
+        /*----------------tekst i desktop-------------------*/
 
         h3 {
             font-size: 3rem;
+            margin-bottom: 0;
         }
 
         p {
@@ -167,10 +141,15 @@
             line-height: 35px;
         }
 
+
+        /*-----------------------------------*/
+
+
         .fuldhedsskala {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
             width: 50%;
-            position: relative;
-            right: -189px;
         }
 
         .billede {
@@ -190,16 +169,12 @@
             padding-top: 5rem;
         }
 
-
         button {
-            cursor: pointer;
-            color: white;
-            font-family: 'Titillium Web';
-            margin: 0 0.3em 0.3em 0;
-            transition: all 0.15s;
-            border: none;
-            text-decoration: underline;
             font-size: 17px;
+        }
+
+        .fremgangsmåde {
+            margin-top: 0;
         }
 
         .fuldhed {
@@ -211,7 +186,6 @@
             font-size: 30px;
         }
     }
-
 </style>
 
 <body>
@@ -318,8 +292,5 @@
                 document.querySelector("#menuknap").textContent = "x";
             }
         }
-
     </script>
-</body>
-
-</html>
+</body></html>
