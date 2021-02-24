@@ -7,25 +7,66 @@
     <title>Drinks site</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&family=Open+Sans:wght@300;400;600&family=Titillium+Web:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mutual.css">
 
     <style>
+        /*  -----------video-----------*/
+        #video {
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #video_intro {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+
+        @media (min-aspect-ratio: 16/9) {
+            #video_intro {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        @media (max-aspect-ratio: 16/9) {
+            #video_intro {
+                width: auto;
+                height: 100%;
+            }
+        }
+
+        /*  -----------video-----------*/
+
+        body {
+            background-color: #131314;
+        }
+
+
         /* Styling af siden i mobilversion*/
 
+        /*
         html {
             scroll-behavior: smooth;
         }
+
 
         Body {
             background-color: #131314;
             margin: 0px;
         }
+*/
 
         /*Vores burgermenu har classen hidden som er defineret her*/
+        /*
         .hidden {
             opacity: 0;
             transform: translateX(100%);
         }
+*/
 
+        /*
         #menuknap {
             position: absolute;
             display: inline-block;
@@ -48,20 +89,26 @@
             left: 0px;
             cursor: pointer;
         }
+*/
 
         /*Når man holder musen over menupunkterne, kommer der en underline for at optimere brugeroplevelsen*/
+        /*
         nav.top a:hover {
             text-decoration: underline;
         }
+*/
 
+        /*
         li {
             padding-bottom: 0vw;
             font-family: 'Titillium web', sans-serif;
 
         }
+*/
 
         /*Vi har gjort vores logo fixed på siden, således den følger med ned på siden når man scroller - det er igen for at optimere brugeroplevelsen*/
 
+        /*
         .nav_logo {
             width: 20%;
             float: left;
@@ -70,6 +117,7 @@
             position: fixed;
             z-index: 1;
         }
+*/
 
 
         .menu {
@@ -77,6 +125,7 @@
             z-index: 5;
         }
 
+        /*
         .logo {
             width: 50%;
             z-index: 3;
@@ -84,7 +133,9 @@
             top: 13px;
             left: 26%;
         }
+*/
 
+        /*
         nav.top a {
             color: white;
             text-decoration: none;
@@ -103,6 +154,7 @@
             position: fixed;
             z-index: 4;
         }
+*/
 
 
 
@@ -134,6 +186,7 @@
         }
 
 
+        /*
         #video_intro {
             height: 100%;
             width: 100%;
@@ -142,6 +195,7 @@
             z-index: 2;
             margin-top: -14.8em;
         }
+*/
 
         #second_section h1,
         p {
@@ -261,6 +315,7 @@
 
         @media (min-width: 500px) {
 
+            /*
             .nav_logo {
                 width: 20%;
                 float: left;
@@ -269,6 +324,7 @@
                 position: fixed;
                 z-index: 1;
             }
+*/
 
             button {
                 text-align: center;
@@ -280,6 +336,7 @@
                 font-size: 15px;
             }
 
+            /*
             #menuknap {
                 position: absolute;
                 display: inline-block;
@@ -301,7 +358,9 @@
                 left: 22vw;
                 cursor: pointer;
             }
+*/
 
+            /*
             #video_intro {
                 height: 100%;
                 width: 100%;
@@ -310,6 +369,7 @@
                 z-index: 2;
                 margin-top: -16em;
             }
+*/
 
             #nyheder2 {
                 background-image: url(drinks_nyheder.jpg);
@@ -353,12 +413,15 @@
                 font-size: 30px;
             }
 
+            /*
             li {
                 padding-bottom: 0vw;
                 font-family: 'Titillium web', sans-serif;
 
             }
+*/
 
+            /*
             #video_intro {
                 height: 100%;
                 width: 100%;
@@ -367,7 +430,9 @@
                 z-index: 2;
                 margin-top: -25em;
             }
+*/
 
+            /*
             .nav_logo {
                 width: 20%;
                 float: left;
@@ -400,7 +465,9 @@
                 cursor: pointer;
 
             }
+*/
 
+            /*
             .logo {
                 width: 50%;
                 z-index: 3;
@@ -409,7 +476,9 @@
                 left: 25%;
 
             }
+*/
 
+            /*
             .nav_logo {
                 width: 20%;
                 float: left;
@@ -418,6 +487,7 @@
                 position: fixed;
                 z-index: 1;
             }
+*/
 
             button {
                 text-align: center;
@@ -479,6 +549,7 @@
         /*webversion af siden*/
         @media (min-width: 800px) {
 
+            /*
             #menu {
                 list-style: none;
                 flex-direction: row;
@@ -513,6 +584,8 @@
                 position: fixed;
                 z-index: 4;
             }
+*/
+            /*
 
             nav.top a {
                 color: white;
@@ -531,8 +604,10 @@
             nav.top a:active {
                 text-decoration: underline;
             }
+*/
 
 
+            /*
             .logo {
                 width: 50%;
                 z-index: 3;
@@ -540,7 +615,9 @@
                 top: 42px;
                 left: 25%;
             }
+*/
 
+            /*
             .nav_logo {
                 width: 11%;
                 float: left;
@@ -549,8 +626,10 @@
                 position: fixed;
                 z-index: 1;
             }
+*/
 
 
+            /*
             #video_intro {
                 height: 100%;
                 width: 100%;
@@ -563,6 +642,7 @@
             video {
                 margin-bottom: 50px;
             }
+*/
 
             h1 {
 
@@ -654,26 +734,43 @@
 
 <body>
     <header>
+        <!--
         <a href=""><img src="drinklogo2.png" alt="logo" class="logo"></a>
 
         <a href="index.html"><img src="drinklogo2.png" alt="logo" class="nav_logo"></a>
+-->
 
         <!--      her laver vi vores burgermenu i html-->
+
+        <a href="index.html"><img src="logo1.png" alt="logo" class="logo"></a>
         <nav class="top">
             <div id="menuknap">☰</div>
             <ul id="menu" class="hidden">
-                <!-- henviser til de andre sider man kan navigere hen på-->
-                <li><a href="filtrering.html">Drinks</a></li>
+                <li> <a href="filtrering.html">Drinks</a></li>
                 <li><a href="filtrering.html">Inspiration</a></li>
                 <li><a href="#nyheder2">Nyheder</a></li>
             </ul>
         </nav>
+
     </header>
 
+
     <section id="first_section">
-        <!-- vores baggrundsvideo er fået funktionen autoplay loop muted, således den fortsætter med at spille hele tiden man er på siden-->
+        <div id="video">
+            <!-- vores baggrundsvideo er fået funktionen autoplay loop muted, således den fortsætter med at spille hele tiden man er på siden-->
+            <video id="video_intro" autoplay loop muted>
+                <source src="video/SplashvideoMedLogomp4.mp4">
+            </video>
+        </div>
+    </section>
+
+
+    <!--
+    <section id="first_section">
+         vores baggrundsvideo er fået funktionen autoplay loop muted, således den fortsætter med at spille hele tiden man er på siden
         <div class="video"> <video id="video_intro" autoplay loop muted src="http://pernillestrate.dk/kea/07_dynamisk_web/07.04.01/Splashvideo1.mp4"></video></div>
     </section>
+-->
 
     <section id="second_section">
         <h1>Great drinks bring us together</h1>

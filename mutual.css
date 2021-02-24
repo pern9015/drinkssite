@@ -14,10 +14,9 @@
   }
 
   body {
-      background-color: #131314;
-      margin-left: 40px;
-      margin-right: 40px;
+      margin: 0 auto;
   }
+
 
   /*-------------Menu/navigation-----------------------*/
 
@@ -30,7 +29,7 @@
 
   /*Giver burgermenuen en placering og styling*/
   #menuknap {
-      position: absolute;
+      position: fixed;
       display: inline-block;
       font-size: 25px;
       color: white;
@@ -40,7 +39,7 @@
 
   /*Giver menupunkterne i burgermenuen en placering, styling og en slide ind effekt*/
   #menu {
-      position: absolute;
+      position: fixed;
       transform-origin: top right;
       z-index: 2;
       text-align: right;
