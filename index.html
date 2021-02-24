@@ -18,9 +18,12 @@
 
         #video_intro {
             position: relative;
+            /*Videoen har fået en relativ så den kan ligge helt øverst og sådan menuen kan ligge ovenpå*/
             left: 50%;
+            /*Videoen ligger i midten*/
             transform: translateX(-50%);
             z-index: 2;
+            /*Videoen har et z-index på 2 sådan at det ligger over logoet*/
 
         }
 
@@ -67,6 +70,7 @@
         #menuknap {
             right: 18px;
             z-index: 3;
+            /*Burgermenuen har fået et z-index på 3, så det ligger ovenpå videoen (som har et z-index på 2), men det har logoet ikke da det først skal dukke op når man har scrollet forbi videoen */
 
         }
 
@@ -283,7 +287,6 @@
         @media (min-width: 700px) {
 
 
-
             p {
                 font-size: 25px;
             }
@@ -375,7 +378,6 @@
                     height: 100%;
                 }
             }
-
 
 
             #video_intro_mobile {

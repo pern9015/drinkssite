@@ -88,9 +88,9 @@
   @media (min-width: 800px) {
 
       .logo {
-          /*          width: 10.6%;*/
           width: 160px;
           position: fixed;
+          /*  --> logoet forbliver oppe i hjørnet når man scoller ned */
           z-index: 2;
           top: 10px;
 
