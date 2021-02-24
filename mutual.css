@@ -71,8 +71,7 @@
       width: 20%;
       position: fixed;
       z-index: 2;
-
-
+      left: 12px;
 
   }
 
@@ -96,8 +95,8 @@
           width: 160px;
           position: fixed;
           z-index: 2;
-          top: 18px;
-          ;
+          top: 10px;
+
       }
 
       #menu {
