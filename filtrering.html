@@ -7,176 +7,177 @@
     <title>Drinks - listeview</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&family=Open+Sans:wght@300;400;600&family=Titillium+Web:wght@200;300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="mutual.css">
-</head>
 
-<style>
-    /*----------------filtrering-----------------------*/
+    <style>
+        /*----------------filtrering-----------------------*/
 
-    body {
-        background-color: #131314;
-        margin-left: 40px;
-        margin-right: 40px;
-    }
-
-    /*Giver baggrundsfarve til den valgte kategori*/
-    .valgt {
-        background-color: #b3e1ff;
-    }
-
-    /*Styling af filtreringsknapperne*/
-    button {
-        background-color: #131314;
-        display: inline-block;
-        color: white;
-        width: 60px;
-        height: 60px;
-        line-height: 60px;
-        border-radius: 50%;
-        border: solid 2px #668ad8;
-        text-align: center;
-        overflow: hidden;
-        transition: .4s;
-        box-shadow: 0 0 10px #9ecaed;
-        margin-left: 20px;
-        cursor: pointer;
-        font-size: 1rem;
-        padding-bottom: 10px;
-
-    }
-
-    button:hover {
-        background: #b3e1ff;
-    }
-
-
-    .filter {
-        text-align: center;
-    }
-
-    /*----------------Tekst-----------------------*/
-
-
-    h1 {
-        font-family: 'Inter', sans-serif;
-        text-transform: uppercase;
-        font-weight: 700;
-        padding-top: 7rem;
-        text-align: center;
-        color: white;
-    }
-
-    h2 {
-        font-family: 'Inter', sans-serif;
-        font-weight: 500;
-        color: white;
-    }
-
-    h3 {
-        font-size: 2rem;
-        font-family: 'Open Sans', sans-serif;
-        color: white;
-    }
-
-    p {
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 300;
-    }
-
-    /*----------------Billeder-----------------------*/
-
-    img {
-        cursor: pointer;
-    }
-
-    /**/
-    .billede {
-        opacity: 1;
-        display: block;
-        transition: .5s ease;
-        backface-visibility: hidden;
-    }
-
-    /*sat hover på billedet så det mister opacity når man holder musen henover*/
-    .billede:hover {
-        opacity: 0.3;
-    }
-
-    .navn {
-        transition: .5s ease;
-        opacity: 0;
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-    }
-
-    /*dette gør at når man holder musen henover billedet så vises navnet på drinken*/
-    article:hover .navn {
-        opacity: 1;
-    }
-
-    .menu {
-        position: relative;
-    }
-
-
-    #liste {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        grid-gap: 20px;
-
-    }
-
-    @media (min-width: 800px) {
-
-        /*---------------tekst i desktop----------------*/
-
-        h1 {
-            font-size: 40px;
-            padding-top: 5rem;
+        body {
+            background-color: #131314;
+            margin-left: 40px;
+            margin-right: 40px;
         }
 
-        h2 {
-            text-align: center;
+        /*Giver baggrundsfarve til den valgte kategori*/
+        .valgt {
+            background-color: #b3e1ff;
         }
 
-
-        /*---------------filtreringsknapper i desktop----------------*/
-
+        /*Styling af filtreringsknapperne*/
         button {
+            background-color: #131314;
+            display: inline-block;
+            color: white;
             width: 60px;
             height: 60px;
             line-height: 60px;
-            margin-top: 40px;
+            border-radius: 50%;
+            border: solid 2px #668ad8;
+            text-align: center;
+            overflow: hidden;
+            transition: .4s;
+            box-shadow: 0 0 10px #9ecaed;
+            margin-left: 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            padding-bottom: 10px;
+
+        }
+
+        button:hover {
+            background: #b3e1ff;
         }
 
 
-        /*---------------grid i desktop----------------*/
+        .filter {
+            text-align: center;
+        }
+
+        /*----------------Tekst-----------------------*/
+
+
+        h1 {
+            font-family: 'Inter', sans-serif;
+            text-transform: uppercase;
+            font-weight: 700;
+            padding-top: 7rem;
+            text-align: center;
+            color: white;
+        }
+
+        h2 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            color: white;
+        }
+
+        h3 {
+            font-size: 2rem;
+            font-family: 'Open Sans', sans-serif;
+            color: white;
+        }
+
+        p {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 300;
+        }
+
+        /*----------------Billeder-----------------------*/
+
+        img {
+            cursor: pointer;
+        }
+
+        /**/
+        .billede {
+            opacity: 1;
+            display: block;
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
+
+        /*sat hover på billedet så det mister opacity når man holder musen henover*/
+        .billede:hover {
+            opacity: 0.3;
+        }
+
+        .navn {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        /*dette gør at når man holder musen henover billedet så vises navnet på drinken*/
+        article:hover .navn {
+            opacity: 1;
+        }
+
+        .menu {
+            position: relative;
+        }
+
 
         #liste {
             display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            grid-auto-flow: dense;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             grid-gap: 20px;
+
         }
 
-        /*Billederne som ikke tilhører de nedstående grid spans strækker sig kun 2 spans og fylder derfor mindre*/
-        .menu {
-            grid-column: span 2;
-        }
+        @media (min-width: 800px) {
 
-        /*5n betyder at hvert femte billede strækker sig over 3 span, men -1 fordi den skal starte på billede 4 og så er det hvert 5 efterfølgende */
-        .menu:nth-child(5n - 1) {
-            grid-column: span 3;
-        }
+            /*---------------tekst i desktop----------------*/
 
-        /*Her er det så hvert femte billede der strækker sig*/
-        .menu:nth-child(5n) {
-            grid-column: span 3;
-        }
+            h1 {
+                font-size: 40px;
+                padding-top: 5rem;
+            }
 
-</style>
+            h2 {
+                text-align: center;
+            }
+
+
+            /*---------------filtreringsknapper i desktop----------------*/
+
+            button {
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                margin-top: 40px;
+            }
+
+
+            /*---------------grid i desktop----------------*/
+
+            #liste {
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                grid-auto-flow: dense;
+                grid-gap: 20px;
+            }
+
+            /*Billederne som ikke tilhører de nedstående grid spans strækker sig kun 2 spans og fylder derfor mindre*/
+            .menu {
+                grid-column: span 2;
+            }
+
+            /*5n betyder at hvert femte billede strækker sig over 3 span, men -1 fordi den skal starte på billede 4 og så er det hvert 5 efterfølgende */
+            .menu:nth-child(5n - 1) {
+                grid-column: span 3;
+            }
+
+            /*Her er det så hvert femte billede der strækker sig*/
+            .menu:nth-child(5n) {
+                grid-column: span 3;
+            }
+
+    </style>
+
+</head>
 
 <body>
     <header>
